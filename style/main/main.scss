@@ -1,0 +1,95 @@
+@import "../mixin/mixin.scss";
+
+.hero {
+  @include font(700, 30px, 37px);
+}
+
+.paragraf {
+  &--reg {
+    @include font(400, 16px, 26px);
+  }
+  &--small {
+    @include font(400, 14px, 22px);
+    color: $black;
+  }
+}
+.intro {
+  @include font(400, 19px, 30px);
+}
+.bg1 {
+  background: url(..//img/Symbol.svg) top/ 520px 600px no-repeat,
+    $gradientSupersoft;
+  border-radius: 0px 0px 12px 12px;
+}
+.bg2 {
+  background: $gradientSupersoft;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.line {
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  margin: 0px auto;
+  &--1 {
+    width: calc(100% - 40px);
+    background: #cacadb;
+  }
+  &--2 {
+    width: calc(100% - 80px);
+    background: #e7e7f2;
+  }
+}
+.btn-blue {
+  @include font(700, 16px, 20px);
+  color: $white;
+  padding: 18px 30px;
+  background: #24a3ff;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+}
+.btn-blue:hover {
+  background: $active-hov;
+  cursor: pointer;
+}
+.btn-blue:active {
+  background: $active-act;
+}
+.dots {
+  @include flex(center, row);
+  justify-content: center;
+  gap: 15px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $active;
+  }
+}
+.dots > svg:nth-child(n + 2) {
+  opacity: 0.2;
+}
+.dots > svg:hover {
+  fill: $active;
+  opacity: 0.6;
+}
+@media screen and (min-width: 768px) {
+  .bg1 {
+    background: url(..//img/Symbol.svg) top/ 894px 1024px no-repeat,
+      $gradientSupersoft;
+  }
+  .hero {
+    @include font(700, 38px, 46px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bg1 {
+    background: url(..//img/Symbol.svg) top/ 670px 768px no-repeat,
+      $gradientSupersoft;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .bg1 {
+    background: url(..//img/Symbol.svg) top/ 874px 1000px no-repeat,
+      $gradientSupersoft;
+  }
+}

@@ -1,0 +1,198 @@
+.btns-wrapper {
+  text-align: -webkit-center;
+}
+
+.publication {
+  padding: 30px;
+  background: rgb(245, 245, 250);
+}
+.publication__btns {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.publication__btns span {
+  position: absolute;
+  top: 12px;
+  pointer-events: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  width: 50%;
+  text-align: center;
+  color: rgb(50, 50, 100);
+}
+.publication__btns span.on {
+  left: 0;
+  padding-left: 2px;
+}
+.publication__btns span.off {
+  right: 0;
+  padding-right: 4px;
+}
+.publication__btns .check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.publication__btns .check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.publication__btns input.check-toggle-round-flat + label {
+  padding: 2px;
+  width: 220px;
+  height: 42px;
+  background: rgb(230, 230, 240);
+  border-radius: 12px;
+}
+.publication__btns input.check-toggle-round-flat + label:before,
+.publication__btns input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+.publication__btns input.check-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: rgb(230, 230, 240);
+  border-radius: 12px;
+}
+.publication__btns input.check-toggle-round-flat + label:after {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 110px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: margin 0.2s;
+}
+.publication__btns input.check-toggle-round-flat:checked + label:after {
+  margin-left: 110px;
+}
+.publication__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgb(36, 163, 255);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.publication__link:hover {
+  color: rgb(240, 20, 90);
+}
+.publication__hero {
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 5px 0 30px;
+}
+.publication__wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 30px;
+}
+.publication__card {
+  background: #ffffff;
+  border-radius: 8px;
+}
+.publication__card-img1 {
+  height: 200px;
+  background: url(../img/Publication/Publication-1.jpg) center/cover no-repeat;
+}
+.publication__card-img2 {
+  height: 200px;
+  background: url(../img/Publication/Publication-2.jpg) center/cover no-repeat;
+}
+.publication__card-img3 {
+  height: 200px;
+  background: url(../img/Publication/Publication-3.jpg) center/cover no-repeat;
+}
+.publication__card-img4 {
+  height: 200px;
+  background: url(../img/Publication/Publication-4.jpg) center/cover no-repeat;
+}
+.publication__card-img5 {
+  height: 200px;
+  background: url(../img/Publication/Publication-5.jpg) center/cover no-repeat;
+}
+.publication__content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+.publication__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(36, 163, 255);
+}
+.publication__title:hover {
+  color: rgb(240, 20, 90);
+  cursor: pointer;
+}
+.publication__date {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(179, 179, 186);
+}
+.publication__text {
+  padding-top: 15px;
+  border-top: 4px solid rgb(230, 230, 240);
+}
+.publication__btn3 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .publication {
+    margin-top: 60px;
+    padding: 30px 60px;
+  }
+  .publication__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card3 {
+    grid-area: 2/1/2/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .publication {
+    padding: 30px 60px;
+  }
+  .publication__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card3 {
+    grid-area: initial;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .publication {
+    padding: 60px 160px;
+  }
+}/*# sourceMappingURL=publication.css.map */

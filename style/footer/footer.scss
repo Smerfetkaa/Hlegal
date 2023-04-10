@@ -1,0 +1,79 @@
+@import "../mixin/mixin.scss";
+
+.footer {
+  padding: 30px 0;
+  border-top: 2px solid $grey-sep;
+  background: $grey-bg;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  row-gap: 25px;
+  justify-items: center;
+  &__adress {
+    @include flex(center, column);
+    gap: 10px;
+  }
+  &__adress > p {
+    @include font(400, 16px, 20px);
+    color: $main;
+  }
+  &__adress > a {
+    @include font(700, 15px, 12px);
+    color: $active;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &__contact {
+    @include font(700, 16px, 20px);
+    @include flex(center, column);
+    gap: 10px;
+  }
+  &__fb {
+    fill: $active;
+    width: 38px;
+    height: 38px;
+  }
+  &__fb:hover {
+    fill: $accent;
+    cursor: pointer;
+  }
+
+  &__contact-tel {
+    color: $main;
+  }
+  &__contact-mail {
+    color: $active;
+  }
+  &__contact-mail:hover {
+    color: $accent;
+  }
+  &__copyright {
+    @include font(400, 16px, 20px);
+    color: $grey-tx;
+  }
+  &__dot {
+    display: none;
+    fill: $grey-tx;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    justify-content: space-between;
+    justify-items: stretch;
+    padding: 30px 60px;
+
+    &__dot {
+      display: block;
+    }
+    &__adress,
+    &__contact {
+      flex-direction: row;
+    }
+    &__copyright {
+      grid-area: 1/2/3/2;
+    }
+    &__contact {
+      grid-area: 2/1/3/3;
+    }
+  }
+}

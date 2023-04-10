@@ -1,0 +1,40 @@
+$black: #000000;
+$white: #ffffff;
+$main: rgba(50, 50, 100, 1);
+$main-alt: rgba(70, 70, 110, 1);
+$main-soft: rgba(104, 104, 135, 1);
+$accent: rgba(240, 20, 90, 1);
+$active: rgba(36, 163, 255, 1);
+$active-hov: rgba(0, 133, 255, 1);
+$active-act: rgba(0, 108, 207, 1);
+$grey-bg: rgba(245, 245, 250, 1);
+$grey-bgalt: rgba(237, 237, 247, 1);
+$grey-tx: rgba(179, 179, 186, 1);
+$grey-sep: rgba(230, 230, 240, 1);
+$gradient: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+$gradientSoft: linear-gradient(
+  42.01deg,
+  #323264 14.33%,
+  #323264 51.39%,
+  #7a425e 87.53%
+);
+$gradientRed: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$gradientSupersoft: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
+$g1radientRedText: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+@mixin flex($ai, $dir) {
+  display: flex;
+  align-items: $ai;
+  flex-direction: $dir;
+}
+@mixin font($fw, $fs, $lh) {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}

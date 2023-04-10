@@ -1,0 +1,192 @@
+@import "../mixin/mixin.scss";
+.btns-wrapper {
+  text-align: -webkit-center;
+}
+.publication {
+  padding: 30px;
+  background: $grey-bg;
+  &__btns {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    span {
+      position: absolute;
+      top: 12px;
+      pointer-events: none;
+      @include font(700, 16px, 20px);
+
+      width: 50%;
+      text-align: center;
+      color: $main;
+    }
+
+    span.on {
+      left: 0;
+      padding-left: 2px;
+    }
+
+    span.off {
+      right: 0;
+      padding-right: 4px;
+    }
+
+    .check-toggle {
+      position: absolute;
+      margin-left: -9999px;
+      visibility: hidden;
+    }
+    .check-toggle + label {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+
+      user-select: none;
+    }
+
+    input.check-toggle-round-flat + label {
+      padding: 2px;
+      width: 220px;
+      height: 42px;
+      background: $grey-sep;
+
+      border-radius: 12px;
+    }
+    input.check-toggle-round-flat + label:before,
+    input.check-toggle-round-flat + label:after {
+      display: block;
+      position: absolute;
+      content: "";
+    }
+
+    input.check-toggle-round-flat + label:before {
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      right: 2px;
+      background-color: $grey-sep;
+
+      border-radius: 12px;
+    }
+    input.check-toggle-round-flat + label:after {
+      top: 2px;
+      left: 2px;
+      bottom: 2px;
+      width: 110px;
+      background-color: #fff;
+
+      border-radius: 10px;
+
+      transition: margin 0.2s;
+    }
+
+    input.check-toggle-round-flat:checked + label:after {
+      margin-left: 110px;
+    }
+  }
+
+  &__link {
+    @include font(700, 14px, 17px);
+    color: $active;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &__link:hover {
+    color: $accent;
+  }
+  &__hero {
+    background: $g1radientRedText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 5px 0 30px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+  &__card {
+    background: $white;
+    border-radius: 8px;
+  }
+  &__card-img1 {
+    height: 200px;
+    background: url(../img/Publication/Publication-1.jpg) center/cover no-repeat;
+  }
+  &__card-img2 {
+    height: 200px;
+    background: url(../img/Publication/Publication-2.jpg) center/cover no-repeat;
+  }
+  &__card-img3 {
+    height: 200px;
+    background: url(../img/Publication/Publication-3.jpg) center/cover no-repeat;
+  }
+  &__card-img4 {
+    height: 200px;
+    background: url(../img/Publication/Publication-4.jpg) center/cover no-repeat;
+  }
+  &__card-img5 {
+    height: 200px;
+    background: url(../img/Publication/Publication-5.jpg) center/cover no-repeat;
+  }
+  &__content {
+    @include flex(flex-start, column);
+    gap: 15px;
+    padding: 30px;
+  }
+  &__title {
+    @include font(700, 16px, 20px);
+    color: $active;
+  }
+  &__title:hover {
+    color: $accent;
+    cursor: pointer;
+  }
+  &__date {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font(700, 12px, 15px);
+    color: $grey-tx;
+  }
+  &__text {
+    padding-top: 15px;
+    border-top: 4px solid $grey-sep;
+  }
+
+  &__btn3 {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .publication {
+    margin-top: 60px;
+    padding: 30px 60px;
+    &__wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .card3 {
+    grid-area: 2/1/2/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .publication {
+    padding: 30px 60px;
+    &__wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .card3 {
+    grid-area: initial;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .publication {
+    padding: 60px 160px;
+  }
+}

@@ -1,0 +1,135 @@
+@import "../mixin/mixin.scss";
+.contacts {
+  padding: 30px;
+  @include flex(flex-start, column);
+  gap: 30px;
+  &__info-adress {
+    @include font(400, 21px, 30px);
+    color: $main;
+    margin-bottom: 30px;
+  }
+  &__info-tel {
+    @include font(400, 21px, 30px);
+    color: $main;
+  }
+  &__info-mail {
+    @include font(400, 21px, 30px);
+    color: $active;
+  }
+  &__info-svg {
+    fill: $active;
+    width: 38px;
+    height: 38px;
+  }
+  // &__info-svg:hover {
+  // }
+
+  &__info-text-fb {
+    @include font(700, 12px, 16px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $active;
+    margin-left: 10px;
+  }
+  // &__info-text-fb:hover {
+  // }
+  &__info-box {
+    @include flex(flex-start, column);
+    gap: 15px;
+    width: calc(100vw - 60px);
+    padding: 30px 0;
+    border-bottom: 4px solid $grey-sep;
+    border-top: 4px solid $grey-sep;
+  }
+  &__fb {
+    margin-top: 30px;
+    @include flex(center, row);
+  }
+  &__fb:hover &__info-svg {
+    fill: $accent;
+  }
+  &__fb:hover &__info-text-fb {
+    color: $accent;
+  }
+  &__form {
+    background: $grey-bg;
+    padding: 30px;
+  }
+  &__form-title {
+    background: $g1radientRedText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+  }
+  &__form input,
+  &__form textarea {
+    background: $white;
+    border-radius: 8px;
+    width: -webkit-fill-available;
+    padding: 15px 0 15px 15px;
+    margin-bottom: 15px;
+  }
+  &__form input::placeholder,
+  &__form textarea::placeholder {
+    color: $grey-tx;
+  }
+
+  &__form textarea {
+    height: 100px;
+    resize: none;
+  }
+  &__form input:focus,
+  &__form textarea:focus {
+    outline: 2px solid $active;
+  }
+  &__form-text {
+    color: $grey-tx;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font(700, 14px, 17px);
+    margin: 15px 0;
+  }
+  &__form-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding: 60px;
+    gap: 60px;
+
+    &__info-box {
+      width: calc(100vw - 120px);
+    }
+    &__form {
+      width: calc(100vw - 180px);
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contacts {
+    flex-direction: row;
+    &__info-box {
+      width: calc((100vw - 180px) / 2);
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts {
+    padding: 60px 180px;
+    &__info-box {
+      width: calc((100vw - 420px) / 2);
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts {
+    padding: 60px 280px;
+    &__info-box {
+      width: calc((100vw - 620px) / 2);
+    }
+  }
+}

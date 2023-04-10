@@ -1,0 +1,194 @@
+@import "../mixin/mixin.scss";
+
+.slogan {
+  @include flex(center, column);
+  gap: 129px;
+  padding-top: 129px;
+  &__text {
+    @include font(700, 38px, 46px);
+    color: $white;
+    text-align: center;
+    margin: 0 90px;
+  }
+  &__btn {
+    margin: 30px 0;
+
+    stroke: $white;
+    background: none;
+  }
+  &__btn:hover {
+    stroke: $accent;
+  }
+}
+.nav {
+  padding-top: 30px;
+  overflow: auto;
+  @include flex(center, row);
+  gap: 30px;
+  white-space: nowrap;
+  margin: 30px 0;
+  padding-left: 8px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    rgba(0, 0, 0, 0.25) 8px,
+    #000 8px,
+    #000 calc(100% - 50px),
+    rgba(0, 0, 0, 0.25) calc(100% - 20px),
+    transparent
+  );
+  &__item > a {
+    color: $grey-tx;
+  }
+  &__item > a:hover {
+    color: $accent;
+  }
+  &__item:first-child {
+    background: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+.nav::-webkit-scrollbar {
+  display: none;
+}
+.intro-services {
+  @include flex(flex-start, column);
+
+  gap: 30px;
+  border-top: 4px solid rgba(255, 255, 255, 0.3);
+  h3 {
+    margin-top: 30px;
+    @include font(700, 20px, 24px);
+    color: $white;
+  }
+  &__intro {
+    color: $white;
+  }
+}
+.team {
+  margin: 30px;
+  background: $grey-bg;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 30px;
+  padding-bottom: 30px;
+  &__content {
+    padding: 0 30px;
+  }
+  &__img {
+    height: 500px;
+    background: url(..//img/Team-1.jpg) center/cover no-repeat;
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
+  }
+
+  &__link {
+    @include font(700, 14px, 17px);
+    color: $active;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &__link:hover {
+    color: $accent;
+  }
+  &__text {
+    background: $g1radientRedText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &__name {
+    @include font(700, 16px, 20px);
+    margin: 30px 0 6px;
+    color: $grey-tx;
+  }
+  &__job {
+    color: $grey-tx;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slogan {
+    padding-top: 270px;
+    gap: 380px;
+    &__text {
+      margin: 0;
+    }
+  }
+  .intro-services {
+    gap: 60px;
+    h3 {
+      margin-top: 60px;
+      @include font(700, 30px, 37px);
+    }
+  }
+  .team {
+    margin: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slogan {
+    padding-top: 245px;
+    gap: 250px;
+  }
+  .intro-container {
+    padding-top: 60px;
+    @include flex(center, row);
+  }
+  .nav {
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: visible;
+    padding-right: 60px;
+    padding-bottom: 0;
+    mask-image: none;
+    padding-top: 0;
+  }
+
+  .intro-services {
+    padding-left: 60px;
+    border-top: none;
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .team {
+    padding-bottom: 0;
+    grid-template-columns: 400px 1fr;
+
+    &__img {
+      height: 528px;
+      width: 400px;
+      border-radius: 12px 0px 0px 12px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro-container {
+    padding: 60px 180px 0;
+  }
+  .team {
+    &__img {
+      height: 344px;
+      border-radius: 12px 0px 0px 12px;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .slogan {
+    padding-top: 360px;
+    gap: 360px;
+  }
+  .team {
+    margin: 60px 160px;
+    &__img {
+      height: 298px;
+    }
+  }
+}

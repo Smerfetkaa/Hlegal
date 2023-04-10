@@ -1,0 +1,170 @@
+@import "../mixin/mixin.scss";
+
+.about {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+  &__hero {
+    background: $g1radientRedText;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+  }
+  &__intro {
+    color: $black;
+  }
+  &__advants {
+    @include flex(flex-start, column);
+    border-left: 4px solid $grey-sep;
+    padding-left: 30px;
+    gap: 40px;
+  }
+  &__card-svg {
+    @include flex(center, row);
+    span {
+      @include font(700, 36px, 44px);
+      background: $g1radientRedText;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-left: 8px;
+    }
+  }
+  &__card p {
+    @include font(400, 16px, 20px);
+    color: $main;
+    margin-top: 10px;
+  }
+}
+.bg-team {
+  background: url(..//img/team.jpg) center/cover no-repeat;
+  p {
+    @include font(700, 36px, 44px);
+    color: $white;
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10vw 0 10vw 5vw;
+    opacity: 0.8;
+    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+  }
+}
+.achievements {
+  padding: 30px 60px;
+  background: $grey-bg;
+  h2 {
+    @include font(700, 14px, 17px);
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $main;
+  }
+  &__wrapper {
+    margin: 30px 0;
+  }
+  &__img {
+    @include flex(center, row);
+    justify-content: center;
+    background: $white;
+    height: 90px;
+
+    img {
+      width: auto;
+      height: 40px;
+    }
+  }
+  &__img:nth-child(n + 2) {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 60px;
+    &__box {
+      padding: 60px 60px 30px;
+    }
+  }
+  .achievements {
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    &__img:nth-child(n + 2) {
+      display: flex;
+    }
+    &__img {
+      width: 132px;
+    }
+    &__dots svg:nth-child(n + 4) {
+      display: none;
+    }
+  }
+  .bg-team {
+    p {
+      @include font(700, 46px, 56px);
+      letter-spacing: 63px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bg-team {
+    p {
+      @include font(700, 86px, 105px);
+    }
+  }
+  .about {
+    grid-template-columns: 1fr 388px;
+    &__box {
+      grid-template-columns: 1fr 388px;
+    }
+  }
+  .achievements {
+    &__img {
+      width: 196px;
+      img {
+        height: 60px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .bg-team {
+    p {
+      @include font(700, 96px, 117px);
+    }
+  }
+  .about {
+    padding: 60px 180px;
+    &__box {
+      padding: 60px 180px 30px;
+    }
+  }
+  .achievements {
+    &__img {
+      width: 300px;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about {
+    padding: 60px 280px;
+    &__box {
+      padding: 60px 280px 30px;
+    }
+  }
+  .achievements {
+    padding: 30px 160px;
+    &__img {
+      width: 370px;
+    }
+  }
+}

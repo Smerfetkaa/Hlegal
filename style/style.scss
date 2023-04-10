@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import "./mixin/mixin.scss";
+@import "./main/main.scss";
+@import "./header/header.scss";
+@import "./home/home.scss";
+@import "./services/services.scss";
+@import "./contacts/contacts.scss";
+@import "./about-us/about.scss";
+@import "./footer/footer.scss";
+@import "./publications/publication.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+main {
+  padding: 0 30px;
+}
+@media screen and (min-width: 768px) {
+  main {
+    padding: 0 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  main {
+    padding: 0 160px;
+  }
+}
